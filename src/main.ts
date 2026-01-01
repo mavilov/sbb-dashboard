@@ -15,7 +15,7 @@ const DEFAULT_CONFIG: AppConfig = {
 const LABELS = {
   en: {
     title:
-      "SBB Timetable Dashboard <a href=https://github.com/mavilov/sbb-dashboard>(GitHub)</a>",
+      "SBB Timetable <a href=https://github.com/mavilov/sbb-dashboard>GitHub</a>",
     time: "Time",
     destination: "Destination",
     plat: "Plat.",
