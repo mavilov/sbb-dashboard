@@ -8,18 +8,17 @@ interface AppConfig {
 }
 
 const DEFAULT_CONFIG: AppConfig = {
-  stations: ["Zürich HB", "Bern", "Basel SBB", "Geneva"],
+  stations: ["Zürich HB", "Wallisellen", "Stettbach", "Stadelhofen"],
   language: "en",
 };
 
 const LABELS = {
   en: {
-    title:
-      "SBB Timetable <a href=https://github.com/mavilov/sbb-dashboard>GitHub</a>",
+    title: "<a href=https://github.com/mavilov/sbb-dashboard>GitHub</a>",
     time: "Time",
     destination: "Destination",
     plat: "Plat.",
-    train: "Train",
+    train: "№",
     settings: "Settings",
     save: "Save",
     station_label: "Station",
@@ -31,7 +30,7 @@ const LABELS = {
     time: "Zeit",
     destination: "Nach",
     plat: "Gl.",
-    train: "Zug",
+    train: "№",
     settings: "Einstellungen",
     save: "Speichern",
     station_label: "Bahnhof",
