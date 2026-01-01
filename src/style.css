@@ -1,0 +1,186 @@
+:root {
+  --sbb-red: #eb0000;
+  --bg-color: #f6f6f6;
+  --text-color: #222;
+  --font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+header {
+  background-color: white;
+  padding: 1rem 2rem;
+  border-bottom: 2px solid #ccc; /* Generic separator */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.sbb-logo {
+  font-weight: 900;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+.sbb-logo span {
+  color: black;
+}
+.sbb-logo .red-arrow {
+  color: var(--sbb-red);
+  font-weight: bold;
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: normal;
+}
+
+main {
+  flex: 1;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  overflow: auto;
+}
+
+.station-card {
+  background: white;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.station-header {
+  background-color: var(--sbb-red);
+  color: white;
+  padding: 0.8rem 1rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.connections-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.connections-table th,
+.connections-table td {
+  padding: 0.8rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--sbb-grey-border, #eee);
+}
+
+.connections-table th {
+  background-color: #fff;
+  color: #666;
+  font-weight: normal;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+.time-col {
+  width: 60px;
+  font-weight: bold;
+}
+.plat-col {
+  width: 40px;
+  text-align: center;
+}
+.train-col {
+  width: 80px;
+}
+
+.delayed {
+  color: var(--sbb-red);
+}
+
+.settings-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.settings-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 4px;
+  width: 400px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.settings-group {
+  margin-bottom: 1rem;
+}
+
+.settings-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.settings-group input,
+.settings-group select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+}
+
+.btn-save {
+  background-color: var(--sbb-red);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  cursor: pointer;
+  width: 100%;
+  font-weight: bold;
+}
+
+.loading {
+  padding: 20px;
+  text-align: center;
+  color: #888;
+}
+
+.settings-icon {
+  cursor: pointer;
+  opacity: 0.2;
+}
+.settings-icon:hover {
+  opacity: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 800px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+}
